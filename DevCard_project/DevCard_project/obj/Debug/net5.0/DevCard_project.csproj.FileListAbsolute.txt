@@ -38,3 +38,4 @@ D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\ref
 D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\DevCard_project.pdb
 D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\DevCard_project.genruntimeconfig.cache
 D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\DevCard_project.csproj.CopyComplete
+D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
