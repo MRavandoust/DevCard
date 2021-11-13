@@ -33,10 +33,16 @@ namespace DevCard_project.Controllers
         //}
 
         [HttpPost]
-        public JsonResult Contact(Contact form)
+        public IActionResult Contact(Contact model)
         {
-            Console.WriteLine(form.ToString());
-            return Json(Ok());
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = "Les information ne sont pas valides";
+                return View(model);
+            }
+            ViewBag.success = "Votre message a bien été envoyé";
+            return View();
+            //return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
