@@ -116,3 +116,5 @@ D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\bin\Debug\net5.0\run
 D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\Razor\Views\Home\Components\Projects\Projects.cshtml.g.cs
 D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\Razor\Views\Home\Components\Articles\Articles.cshtml.g.cs
+D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\Razor\Views\Shared\Header.cshtml.g.cs
+D:\TrainingProjects\DevCard\DevCard_project\DevCard_project\obj\Debug\net5.0\Razor\Views\Shared\Footer.cshtml.g.cs

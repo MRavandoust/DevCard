@@ -17,7 +17,7 @@ namespace DevCard_project.ViewComponents
                 new Article(2, "بهترین مقالات علمی سال", "در این مقالە شما با بهترین مالات سال آشنا میشوید و از خواندن آن می آموزید کە ...", "blog-post-thumb-2.jpg"),
                 new Article(3, "بهترین مقالات علمی سال", "در این مقالە شما با بهترین مالات سال آشنا میشوید و از خواندن آن می آموزید کە ...", "blog-post-thumb-3.jpg"),
             };
-            return View("Articles" , articles);
+            return View("Articles", articles);
         }
     }
 }
