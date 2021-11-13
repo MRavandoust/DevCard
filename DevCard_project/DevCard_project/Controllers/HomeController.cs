@@ -1,6 +1,7 @@
 ﻿using DevCard_project.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,13 @@ namespace DevCard_project.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly List<Service> _services = new List<Service>
+        {
+            new Service(1, "Silver"),
+            new Service(2, "Or"),
+            new Service(3, "Platine"),
+            new Service(4, "Diamonde"),
+        };
 
         public IActionResult Index()
         {
@@ -21,7 +29,10 @@ namespace DevCard_project.Controllers
         [HttpGet]
         public IActionResult Contact()
         {
-            var model = new Contact();
+            var model = new Contact()
+            {
+                Services = new SelectList(_services, "Id", "Name")
+            };
             return View(model);
         }
 
@@ -35,13 +46,20 @@ namespace DevCard_project.Controllers
         [HttpPost]
         public IActionResult Contact(Contact model)
         {
+            model.Services = new SelectList(_services, "Id", "Name");
             if (!ModelState.IsValid)
             {
                 ViewBag.error = "Les information ne sont pas valides";
                 return View(model);
             }
+
+            ModelState.Clear();
+            model = new Contact
+            {
+                Services = new SelectList(_services, "Id", "Name")
+            };
             ViewBag.success = "Votre message a bien été envoyé";
-            return View();
+            return View(model);
             //return RedirectToAction("Index");
         }
 
