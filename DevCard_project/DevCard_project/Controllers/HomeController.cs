@@ -1,4 +1,5 @@
 ﻿using DevCard_project.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -17,11 +18,26 @@ namespace DevCard_project.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Contact()
         {
-            return View();
+            var model = new Contact();
+            return View(model);
         }
 
+        //[HttpPost]
+        //public JsonResult Contact(IFormCollection form)
+        //{
+        //    var name = form["name"];
+        //    return Json(Ok());
+        //}
+
+        [HttpPost]
+        public JsonResult Contact(Contact form)
+        {
+            Console.WriteLine(form.ToString());
+            return Json(Ok());
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
